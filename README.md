@@ -1,1 +1,1 @@
-Some React and TypeScript boilerplate.
+Some React boilerplate with various things.
