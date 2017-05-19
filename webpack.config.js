@@ -15,9 +15,6 @@ const config = {
     path: path.resolve('dist'),
     filename: 'index_bundle.js'
   },
-  resolve: {
-    extensions: ['.ts', '.tsx', '.js']
-  },
   module: {
     loaders: [
       {
@@ -27,19 +24,11 @@ const config = {
         query: {
           presets: ['react', 'es2015'],
         }
-      },
-      {
-        test: /\.tsx?$/,
-        exclude: /(node_modules)/,
-        loader: 'ts-loader',
-        options: {
-          transpileOnly: true
-        }
       }
     ]
   },
   devtool: 'inline-source-map',
-  // plugins: [HtmlWebpackPluginConfig]
+  plugins: ['transform-flow-strip-types']
 };
 
 module.exports = config;
