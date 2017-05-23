@@ -12,11 +12,8 @@ const path = require('path');
 const config = {
   entry: './client/index.js',
   output: {
-    path: path.resolve('dist'),
-    filename: 'index_bundle.js'
-  },
-  resolve: {
-    extensions: ['.ts', '.tsx', '.js']
+    path: path.resolve('public'),
+    filename: 'bundle.js'
   },
   module: {
     loaders: [
@@ -27,19 +24,10 @@ const config = {
         query: {
           presets: ['react', 'es2015'],
         }
-      },
-      {
-        test: /\.tsx?$/,
-        exclude: /(node_modules)/,
-        loader: 'ts-loader',
-        options: {
-          transpileOnly: true
-        }
       }
     ]
   },
-  devtool: 'inline-source-map',
-  // plugins: [HtmlWebpackPluginConfig]
+  // devtool: 'inline-source-map'  // todo: gets error, why?
 };
 
 module.exports = config;
