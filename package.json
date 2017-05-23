@@ -11,6 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-register": "^6.24.1",
+    "express": "^4.15.3",
     "path": "^0.12.7",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
